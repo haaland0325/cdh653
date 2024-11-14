@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>视频背景示例</title>
+<style>
+	.center-text {
+          text-align: center;
+      }
+	.larger-text {
+            font-size: 24px; /* 类名为.larger-text的元素字体大小为24像素 */
+        }
+	.text-center-large {
+        font-size: 24px; /* 或者使用其他大小，如 em, rem 单位 */
+        text-align: center; /* 文本居中 */
+        margin: 0 auto; /* 如果是块级元素，这可以使其在父容器中水平居中 */
+        /* 可选：设置一个固定的宽度并使用 margin 自动，如果需要限制宽度并居中 */
+        width: 50%; /* 示例宽度，根据需要调整 */
+    }
+	.return-home-button1 {
+    /* 原有的样式保持不变 */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%; /* 添加这行使按钮变为圆形 */
+}
+	.return-home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* 按钮背景色 */
+    color: white; /* 文本颜色 */
+    text-decoration: none; /* 移除下划线 */
+    border-radius: 5px; /* 圆角效果 */
+}
+.return-home-button:hover {
+    background-color: #45a049; /* 鼠标悬停时的背景色 */
+}
+    
+  /* 让视频成为绝对定位，覆盖整个背后层 */
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* 确保视频在内容层之下 */
+    object-fit: cover; /* 保持视频宽高比填充容器 */
+  }
+
+  /* 确保页面内容可读 */
+  .content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1; /* 内容位于视频层之上 */
+  }
+body,td,th {
+	color: #680416;
+}
+</style>
+</head>
+<body>
+<a href="hai.html" class="return-home-button">返回主页</a>
+<audio controls autoplay>
+	<source src="../image/flowers.mp3" type="audio/mpeg">
+</audio>
+<table width="409" height="638" border="1">
+  <tbody>
+    <tr>
+      <th width="17" height="632" scope="row">唱<br>
+      <br></th>
+      <td width="546"><strong>喜欢听歌（邓紫棋！队长！薛之谦！宋雨琦！）</strong><img src="../image/dzq.jpg" width="375" height="610" alt=""/></td>
+    </tr>
+  </tbody>
+</table>
+<table width="216" border="1" align="right">
+  <tbody>
+    <tr>
+      <td width="158"><p><strong>见到篮球架就有跳跳的冲动。如今我已恢复九成功力，适当热身就能摸框。还在练弹跳中，争取大学扣一次篮。 </strong></p>
+        <p><strong>回想高一，第一次看到运动会项目中有三级跳远一项，喜欢新鲜事的我毫不犹豫选择了它。回家就开始看视频学起来。一点一滴，从狼狈地跳进坑，到轻松熟练。可终究是自己乱练出来的，膝盖也在自己的折磨下一点一滴“耗损”。还好功夫不负有心人，在这次运动会中我三级跳拿了银牌。</strong></p>
+        <p><strong>到了高二上学期，运动会又临近，我再次坚定选择了它。在活动课恢复熟练度，可这次，不只是膝盖了，我的脚后跟因为鞋子的原因仿佛有了骨裂，一段时间内甚至走路都有问题，庆幸的是，在运动会期间不是很痛，也因为上届金牌得主的伤退，我凭借第一跳的11.5米便已经锁定金牌（4*100预赛和三级跳时间重合，我跳玩第一跳便去4*100了）在回来后又在第五跳刷新自己的pb，11.8米。！</strong></p>
+        <p><strong>高三有点遗憾，仍然是伤病，在前一天膝盖又痛了。比赛时只能一跳了之。</strong></p>
+      <p><strong>（写上面文字的一周后，我的膝盖又有了阵痛，我感觉我真的快“废”了。）</strong></p></td>
+      <td width="42"><strong>跳and篮球</strong></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="200" border="1">
+  <tbody>
+    <tr>
+      <td width="25"><strong>rap</strong></td>
+      <td width="159"><strong>早安哥的《麒麟》属实是充满了我升高三的暑假。法老的说唱也是经典。</strong><img src="../image/qilin.jpg" width="1004" height="558" alt=""/></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p class="text-center-large" >完了我好像触发关键词了</p>
+<p class="center-text"><a href="https://www.bilibili.com/video/BV1KXSoYBEs6/"> KUN</a></p>
+<p>&nbsp;</p>
+<p class="text-center-large">&nbsp;</p>
+<p class="text-center-large">当然我也喜欢看番，如果感兴趣就来和我分享吧</p>
+
+<video autoplay muted loop>
+  <source src="../image/xiaoshipin.mp4" type="video/mp4">
+  <!-- 提供备用源或错误信息 -->
+  您的浏览器不支持视频标签。 </video>
+
+
+</body>
+</html>
