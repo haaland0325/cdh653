@@ -1,0 +1,9 @@
+# seekdb × AMD hipVS 向量索引
+
+GPU 计算
+
+围绕 GPU CAGRA 离线建图优化，验证检索、重载与基本功能。
+
+2048 版在开发数据上综合建图加速 3.03 倍、综合查询加速 10.14 倍。验证覆盖召回率、持久化重载及 CPU/GPU 基本功能，官方隐藏集与 GPU 抽检待确认。
+
+[源码仓库（需访问权限）](https://github.com/wangzhiyao-sys/Ocean-base-seekdb)
