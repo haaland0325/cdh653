@@ -151,6 +151,7 @@ details[open] > summary::after { content: "−"; }
       <nav class="sidebar-section panel" aria-label="页面目录">
         <h2>快速导航</h2>
         <a href="#projects">精选项目</a>
+        <a href="#oceanbase">OceanBase 竞赛</a>
         <a href="#more">工程实践</a>
         <a href="#other-work">AI 应用与建模</a>
         <a href="#notes">项目笔记</a>
@@ -185,19 +186,21 @@ details[open] > summary::after { content: "−"; }
       </article>
       </section>
       
-      <section id="more" class="section-panel">
-        <h2 class="content-heading">工程实践</h2>
+      <section id="oceanbase" class="section-panel">
+        <h2 class="content-heading">OceanBase 竞赛</h2>
         
-  <article class="project" id="wrf">
+  <article class="project" id="powercontext">
     <details>
     <summary>
-      <span><span class="category">高性能计算 · 鲲鹏 S3</span><strong class="project-title">WRF 气象模拟优化</strong></span>
-      <span class="metric">2.39×<small>本地时间步吞吐</small></span>
-      <span class="project-description">通过热点分析、源码改动与 MPI 并行，缩短气象模拟时间步耗时。</span>
+      <span><span class="category">OceanBase · PowerContext 代码题</span><strong class="project-title">PowerContext 上下文工程</strong></span>
+      <span class="metric">170 / 240<small>已记录的平台成绩</small></span>
+      <span class="project-description">完成十道代码题的实现，覆盖数据采集、证据检索、上下文传输和运行时管理。</span>
     </summary>
     <div class="details-body">
-      <p>同机、同输入，五组交替运行 WRF v4.6.0 的 em_quarter_ss 算例。原版单进程第 2–300 步中位耗时为 13.856 秒，优化版 4 个 Open MPI 进程为 5.793 秒。</p>
-      <p>八个输出字段通过本地精度检查。单进程优化版吞吐为原版的 1.22 倍。赛事 576 核环境与正式算例仍待验证。</p>
+      <p>数据采集与回查：CSV 行级采集、Pi 会话分支与断点恢复、PDF 全文和证据页检索。</p>
+      <p>检索与排序：HTTP 重排及跨批次排序、按查询和预算选择原文证据、seekdb 单 SQL 全文与向量混合检索。</p>
+      <p>上下文与运行时：增量传输、新增来源数量触发、Embedding 批量合并及缓存、来源生命周期管理。</p>
+      <p>后续围绕 PDF 页检索和证据选择做了召回复测。已有版本通过 95 项公开测试，后续平台成绩待确认。</p>
     </div>
     </details>
   </article>
@@ -222,6 +225,71 @@ details[open] > summary::after { content: "−"; }
     </summary>
     <div class="details-body">
       <p>2048 版在开发数据上综合建图加速 3.03 倍、综合查询加速 10.14 倍。验证覆盖召回率、持久化重载及 CPU/GPU 基本功能，官方隐藏集与 GPU 抽检待确认。</p>
+    </div>
+    </details>
+  </article>
+  <article class="project" id="echo-pawnshop">
+    <details>
+    <summary>
+      <span><span class="category">OceanBase 生态题 · Dify</span><strong class="project-title">回声当铺 · Echo Pawnshop</strong></span>
+      <span></span>
+      <span class="project-description">用 Dify 编排 AI 叙事，通过 PowerContext 保存玩家在两夜之间留下的契约和承诺。</span>
+    </summary>
+    <div class="details-body">
+      <p>本地端到端验证通过两夜九笔真实 AI 交易，覆盖跨会话恢复、重复请求只结算一次、玩家记忆隔离和服务重启后恢复。</p>
+    </div>
+    </details>
+  </article>
+  <article class="project" id="minimax-sdd">
+    <details>
+    <summary>
+      <span><span class="category">OceanBase 生态题 · MiniMax</span><strong class="project-title">规有所依 · SDD 上下文模块</strong></span>
+      <span></span>
+      <span class="project-description">用 seekdb 检索工程规格，用 PowerContext 保存开发任务状态，并让 MiniMax 根据规格修改代码。</span>
+    </summary>
+    <div class="details-body">
+      <p>以订单状态筛选为验收场景。真实模型生成修改后，39 项目标功能测试和 33 项回归测试通过，并在空状态的新目录完成复现。</p>
+    </div>
+    </details>
+  </article>
+  <article class="project" id="study-memory">
+    <details>
+    <summary>
+      <span><span class="category">OceanBase 生态题 · Qoder</span><strong class="project-title">研途记忆 · Study Memory</strong></span>
+      <span></span>
+      <span class="project-description">把学习笔记转成可回查原文的复习卡与自测题，跨会话保存薄弱点和复习进度。</span>
+    </summary>
+    <div class="details-body">
+      <p>通过 PowerContext 恢复学习偏好与复习队列。交付记录包含站点发布、可运行应用和 10 组 PowerContext 验收结果。</p>
+    </div>
+    </details>
+  </article>
+  <article class="project" id="edge-retrieval">
+    <details>
+    <summary>
+      <span><span class="category">OceanBase 生态题 · 阶跃星辰</span><strong class="project-title">星端知识库 · Edge Retrieval Lab</strong></span>
+      <span></span>
+      <span class="project-description">在浏览器中把文档与查询转换成向量，通过 seekdb 混合检索返回原文与出处。</span>
+    </summary>
+    <div class="details-body">
+      <p>在 Edge 中验证 WebGPU 推理、关闭 GPU 后自动切换 WASM、增量导入和数据库侧混合检索。阻断非本机请求后，完整导入与查询流程仍可运行。</p>
+    </div>
+    </details>
+  </article>
+      </section>
+      <section id="more" class="section-panel">
+        <h2 class="content-heading">工程实践</h2>
+        
+  <article class="project" id="wrf">
+    <details>
+    <summary>
+      <span><span class="category">高性能计算 · 鲲鹏 S3</span><strong class="project-title">WRF 气象模拟优化</strong></span>
+      <span class="metric">2.39×<small>本地时间步吞吐</small></span>
+      <span class="project-description">通过热点分析、源码改动与 MPI 并行，缩短气象模拟时间步耗时。</span>
+    </summary>
+    <div class="details-body">
+      <p>同机、同输入，五组交替运行 WRF v4.6.0 的 em_quarter_ss 算例。原版单进程第 2–300 步中位耗时为 13.856 秒，优化版 4 个 Open MPI 进程为 5.793 秒。</p>
+      <p>八个输出字段通过本地精度检查。单进程优化版吞吐为原版的 1.22 倍。赛事 576 核环境与正式算例仍待验证。</p>
     </div>
     </details>
   </article>
